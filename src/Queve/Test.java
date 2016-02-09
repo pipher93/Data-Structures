@@ -19,5 +19,12 @@ public class Test {
         
         System.out.println("Initial Values");
         q.print();
+        
+        int d= q.remove();
+        System.out.print(""+d);
+        
+        System.out.println("Current value: ");
+        
+        q.print();
     }
 }
