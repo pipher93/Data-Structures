@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package data.structures;
+package Queve;
 
 /**
  *
- * @author AULA4
+ * @author AULA1
  */
-public class DataStructures {
-
-    /**
-     * @param args the command line arguments
-     */
+public class Test {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Queve q = new Queve();
+        
+        for(int i=0;i<20;i++){
+            q.add(i);
+        }
+        
+        System.out.println("Initial Values");
+        q.print();
     }
-    
 }

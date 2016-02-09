@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unitycero;
+package Queve;
 
 /**
  *
- * @author AULA4
+ * @author AULA1
  */
-public class Stack {
-    
+public class Queve {
     private int[] data;
     private int top;
+    
+    public Queve(){
+        data = new int[100];
+        top = 0;
+    } 
     
     public void add(int d){
         data[top]=d;
@@ -20,9 +24,12 @@ public class Stack {
     }
     
     public int remove(){
+        int d = data[0];
+        for(int i=0;i<top-1;i++){
+            data[i]=data[i+1];
+        }
         top--;
-        return data[top];
-        
+        return d;
     }
     
     public void print(){
@@ -31,11 +38,5 @@ public class Stack {
         }
         System.out.println("");
     }
-    
-    public Stack(){
-        data = new int[100];
-        top = 0;
-    }
-    
     
 }
