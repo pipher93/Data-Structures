@@ -23,7 +23,7 @@ public class Test {
         int d= q.remove();
         System.out.print(""+d);
         
-        System.out.println("Current value: ");
+        System.out.println("Current values: ");
         
         q.print();
     }
