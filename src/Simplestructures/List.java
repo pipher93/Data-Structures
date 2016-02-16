@@ -80,7 +80,7 @@ public class List {
             }
             aux = aux.next;
         }
-        return -1;
+        return -2;
   }
        
  } 
