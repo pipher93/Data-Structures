@@ -24,11 +24,11 @@ public class List {
             head=n;
         } else {
             Node aux = head;
-            while ( aux.Next != null){
-                aux = aux.Next;
+            while ( aux.next != null){
+                aux = aux.next;
                 
             }
-            aux.Next=n;
+            aux.next=n;
         } 
     }
     
@@ -37,7 +37,7 @@ public class List {
         Node aux = head;
         while (aux != null){
           System.out.print(" " +aux.data);
-          aux=aux.Next; 
+          aux=aux.next; 
       }  
           System.out.println(" ");
     }
@@ -49,13 +49,14 @@ public class List {
        int counter = 0;
        while (aux != null) {           
            counter ++;
-           aux=aux.Next;
+           aux=aux.next;
        }
        
        return counter;
    }
     
   public int FirstElement(){
+      
     
 
         Node aux = head;
@@ -67,27 +68,76 @@ public class List {
             aux = aux.next;
         }
         return -1;
-  }
+       
+} 
     
  public int EndElement(){
+    Node aux=head;    
+    Node n=aux;
+    
+     if (head==null)return -1;
+     if (head.next!=null) {
+         head=head.next;
+     
+     while (aux!=null&&aux.next!=null) {         
+         aux=aux.next;
+         n=aux;
+     }
         
-        Node aux = head;
-
-        while (aux != null) {
-
-            if ( aux==aux.next) {
-                return aux.data;
-            }
-            aux = aux.next;
-        }
-        return -2;
-  }
-       
- } 
+     }else{
+         System.out.println("-1");
+     }
+   return n.data;
+}
    
+    
+// public  int remove ( int p){
+//        if (head == null) {
+//            return 0;
+//        }
+//       if (p == 0) {
+//            head = head.next;
+//            return 0;
+//        }
+//
+//        Node aux = head;
+//        Node q = null;
+//        int counter =0;
+//        for (;counter<p && aux!=null;counter++) {
+//            q = aux;
+//            aux = aux.next;
+//
+//            if (aux == null) {
+//                return 0;
+//            }
+//        }
+//        q.next = aux.next;
+//        return q.data;
+//       
+//}
  
-   
-      
+ public void Removefirtselement(){
+     Node aux=head;
+     if(head==null)return ;
+     if(head!=null){
+         aux=aux.next;
+         head=aux;
+     }
+     head=head.next;
+ }
 
+    void Removelastselement() {
+        Node aux= head;
+        Node n= aux;
+         if (head==null) return;
+         if(head.next!=null){
+             head=head.next;
+         }
+         while(aux!=null&&aux.next!=null){
+             aux=aux.next;
+             n=aux;
+         }
+         n.next=aux.next;
+    }
 
-
+}

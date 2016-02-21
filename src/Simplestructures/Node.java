@@ -11,12 +11,12 @@ package Simplestructures;
  */
 public class Node {
     protected int data;
-    protected Node Next;
-    Node next;
+    protected Node next;
+    
     
     public Node (int d){
         data=d;
-        Next = null;
+        next = null;
     }
     
     
