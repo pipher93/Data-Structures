@@ -23,14 +23,6 @@ public class Test {
         l.add(3);
         l.add(4);
         l.add(5);
-        l.add(6);
-        l.add(7);
-        l.add(8);
-        l.add(9);
-        l.add(10);
-        
-            
-        
         System.out.println("Testing Print:...");
         System.out.println("--------------------");
         System.out.println("Initial Values:");
@@ -38,7 +30,7 @@ public class Test {
         System.out.println("--------------------");
         System.out.println("Testing Count:...");
         int c = 0;
-        c = l.count(c);
+        c = l.count();
         System.out.println("Total values: " + c);
         System.out.println("--------------------");
         System.out.println("The First Element Is : " + l.FirstElement());
@@ -46,13 +38,18 @@ public class Test {
         System.out.println("--------------------");
 //        System.out.println("Removing Node "+ l.remove(4) );
 //        System.out.println("New List :");
-        System.out.println("--------------------");
-        System.out.println("Removing Firts Element :...");
-        l.Removefirtselement();
+//        System.out.println("--------------------");
+//        System.out.println("Removing Firts Element :...");
+//        l.Removefirtselement();
+//        l.print();
+//         System.out.println("Removing Last Element :...");
+//        l.Removelastselement();
+//        l.print();
+        System.out.println("Duplicate :...");
+        l.duplicate();
         l.print();
-         System.out.println("Removing Last Element :...");
-        l.Removelastselement();
+         System.out.println("Duplicate Mirrior :...");
+        l.duplicatemirror();
         l.print();
-
     }
 }

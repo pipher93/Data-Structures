@@ -43,7 +43,7 @@ public class List {
     }
     
     
-   public int count(int c){
+   public int count(){
        
        Node aux= head;
        int counter = 0;
@@ -139,5 +139,39 @@ public class List {
          }
          n.next=aux.next;
     }
+     public void duplicate() {           
+         Node aux=head;
+           if(head==null)return;
+           Node Last = head;
+           while(Last.next!=null){
+               Last=Last.next;
+           }
+            int c = count();
+            for(int i=0;i<c;i++){
+                Last.next = new Node(aux.data);
+                aux=aux.next;
+                Last=Last.next;
+            }
+            
+        }
+     public void duplicatemirror(){
+//         Node aux=head;
+//           if(head==null)return;
+//           Node Last = head;
+//           while(Last.next!=null){
+//               Last=Last.next;
+//           }
+//            int c = count();
+//            for(int i=0;i<c;i++){
+//                Last.next = new Node(aux.data);
+//                Node n =Last.next; 
+//                aux=aux.next;
+//                Last.next=n;
+//            }
+     }
 
-}
+   
+    }
+
+   
+

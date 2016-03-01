@@ -12,12 +12,17 @@ package Simplestructures;
 public class Node {
     protected int data;
     protected Node next;
+    Node back;
     
     
     public Node (int d){
         data=d;
         next = null;
     }
+
+   
+
+  
     
     
 }
