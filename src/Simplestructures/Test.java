@@ -16,40 +16,51 @@ public class Test {
 
     public static void main(String args[]) {
 
-        System.out.println(" ......TESTING THE LIST CLASS......");
-        List l = new List();
-        l.add(1);
-        l.add(2);
-        l.add(3);
-        l.add(4);
-        l.add(5);
-        System.out.println("Testing Print:...");
-        System.out.println("--------------------");
-        System.out.println("Initial Values:");
+     List l = new List();
+
+        for (int i = 1; i <= 10; i++) {
+            l.add(i);
+        }
+        
+        System.out.println("Probando Lista....");
+        System.out.println("----------");
+        System.out.println("ELementos De La Lista...");
         l.print();
-        System.out.println("--------------------");
-        System.out.println("Testing Count:...");
-        int c = 0;
-        c = l.count();
-        System.out.println("Total values: " + c);
-        System.out.println("--------------------");
-        System.out.println("The First Element Is : " + l.FirstElement());
-        System.out.println("The End Element Is : " + l.EndElement());
-        System.out.println("--------------------");
-//        System.out.println("Removing Node "+ l.remove(4) );
-//        System.out.println("New List :");
-//        System.out.println("--------------------");
-//        System.out.println("Removing Firts Element :...");
-//        l.Removefirtselement();
-//        l.print();
-//         System.out.println("Removing Last Element :...");
-//        l.Removelastselement();
-//        l.print();
-        System.out.println("Duplicate :...");
+         System.out.println("----------");
+        System.out.println("Imprimiendo Elementos En Reversa...");
+        l.reversePrint();
+        l.print();
+        System.out.println("----------");
+        System.out.println("Removiendo Elemeto..."+l.remove(5));
+        System.out.println("Lista Despues De Remover Elemento...");
+        l.print();
+        System.out.println("----------");
+        System.out.println("Contando Elementos...");
+        System.out.println("La Lista Tiene:.."+l.count()+" Elementos");
+        System.out.println("----------");
+        System.out.println("El Primer Elemeto De La Lista Es..."+l.FirstElement());
+        System.out.println("El Ultimo Elemeto De La Lista Es..."+l.EndElement());
+        System.out.println("----------");
+        System.out.println("Eliminando Primer Elemento...");
+        l.Removefirtselement();
+        l.print();
+        System.out.println("Eliminando Ultimo Elemento...");
+        l.Removelastselement();
+        l.print();
+        System.out.println("----------");
+        System.out.println("Duplicando Elementos Al Final...");
         l.duplicate();
         l.print();
-         System.out.println("Duplicate Mirrior :...");
+        System.out.println("Duplicando Elementos DE Atras Hacia Adelante...");
         l.duplicatemirror();
         l.print();
+        System.out.println("----------");
+        System.out.println("Invirtiendo Elementos ...");
+        l.invert();
+        l.print();
+        
+        
+        
+        
     }
 }
