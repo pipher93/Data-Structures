@@ -16,7 +16,7 @@ public class List {
     
     
     public List (){
-        head = null;
+        head =null ;
     }
     public void add (int d) {
         Node n = new Node(d); // guarad numeros
